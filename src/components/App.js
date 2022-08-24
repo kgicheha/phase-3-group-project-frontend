@@ -1,8 +1,15 @@
 import React from 'react'
+import NavBar from './NavBar'
+import ParentsContainer from './ParentsContainer'
+// import { Route, Switch } from 'react-router-dom';
+
 
 const App = () => {
   return (
-    <div>Dope Project Coming Soon!</div>
+    <div>
+      <NavBar />
+      <ParentsContainer />
+    </div>
   )
 }
 
