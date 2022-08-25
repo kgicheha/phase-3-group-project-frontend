@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from 'react'
 import ParentsCard from './ParentsCard';
 
+
 const ParentsAll = () => {
 
     const [parents, setParents] = useState([])
@@ -15,7 +16,7 @@ const ParentsAll = () => {
     },[]);
 
   return (
-    <div>
+    <div className='cards'>
     {
       parents.map((parent) => (
         <ParentsCard
