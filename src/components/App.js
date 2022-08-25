@@ -10,7 +10,7 @@ import PetsContainer from './PetsContainer';
 import ParentsContainer from './ParentsContainer';
 
 var id = 1;
-var s_p = "parents";
+var s_p = "shelters";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home/>}></Route>
-        {/* <Route path="/shelters" element={<Shelters/>}></Route> */}
+        <Route path="/shelters" element={<Shelters/>}></Route>
         <Route path="/parents" element={<ParentsAll/>}></Route>
         <Route path="/pets" element={<PetsAll />}></Route>
         <Route path={`/${s_p}/${id}/pets`} element={<PetsContainer s_p={s_p} id={id}/>}></Route>
