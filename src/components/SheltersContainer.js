@@ -12,8 +12,6 @@ const SheltersContainer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
 }, []);
 
-console.log(shelters)
-
   return (
     <div>
     {
@@ -25,7 +23,8 @@ console.log(shelters)
           location = {shelter.location}
           hours = {shelter.hours}
           no_kill = {shelter.no_kill}
-          id = {shelter.id} /> 
+          id = {shelter.id}
+           /> 
       ))
     }
     </div>
