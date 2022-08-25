@@ -2,22 +2,17 @@
 import React, {useState, useEffect} from 'react'
 import ParentsCard from './ParentsCard';
 
-
-const ParentsContainer = ({id}) => {
+const ParentsAll = () => {
 
     const [parents, setParents] = useState([])
 
     useEffect(()=>{
-     
-        fetch(`http://localhost:9292/shelters/${id}/parents`)
+        fetch('http://localhost:9292/parents')
         .then(res => res.json())
         .then(data => {
           setParents(data)
         })
-         // eslint-disable-next-line
     },[]);
-
-console.log(parents)
 
   return (
     <div>
@@ -35,4 +30,4 @@ console.log(parents)
   )
 }
 
-export default ParentsContainer
+export default ParentsAll

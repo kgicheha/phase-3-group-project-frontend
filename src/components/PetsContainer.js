@@ -14,16 +14,14 @@ const PetsContainer = ({id, s_p}) => {
       //eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
-console.log(pets)
-
   return (
       <div>{
       pets.map((pet) => (
-                <Pets
+        <Pets
           key = {pet.id}
           name = {pet.name}
           image = {pet.image_url}
-      />
+        />
       ))
       }</div>
     )
