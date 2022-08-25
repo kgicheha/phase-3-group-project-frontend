@@ -9,7 +9,7 @@ function Pets({name, image, description}) {
 
   return (
     <div>
-        <img src={image} alt="pet"/>
+        <img src={image} alt="pet" width={300}/>
         <h3>name: {name}</h3>
         <p>description: {description}</p>
         <button className={isFund ? "fund" : "foster"}

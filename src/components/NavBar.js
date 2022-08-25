@@ -1,18 +1,35 @@
 import React from 'react'
-// import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
-const NavBar = () => {
+
+function NavBar () {
   return (
-    <div>
-      <img alt="Logo"></img>
-        <span
-            id="home" to="/">Home
-        </span>
-        <span
-          id="about-us" to= "/about"> About
-        </span>
-    </div>
+   <div>
+    <button><NavLink to="/"exact>
+      Home
+    </NavLink></button>
+    
+    <button><NavLink to="/shelters"exact>
+      Shelters
+    </NavLink></button>
+
+    <button><NavLink to="/parents"exact>
+      Parents
+    </NavLink></button>
+    <button><NavLink to="/pets"exact>
+      Pets
+    </NavLink></button>
+    
+    
+   </div>
   )
 }
 
 export default NavBar
+
+// <img
+// id="logo"
+// src={require("../Assets/logo.png")}
+// alt="Logo"
+// height="125"
+// />
