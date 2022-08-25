@@ -2,8 +2,9 @@ import React from 'react'
 import { Route, Routes} from "react-router-dom";
 
 import NavBar from './NavBar'
-import Home from './Home'
+import About from './About'
 import ParentsAll from './ParentsAll'
+import SheltersContainer from './SheltersContainer'
 import PetsAll from './PetsAll'
 import Pet from './Pet_Instance'
 import PetsContainer from './PetsContainer';
@@ -17,8 +18,8 @@ const App = () => {
     <div>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/shelters" element={<Shelters/>}></Route>
+        <Route path="/" element={<About/>}></Route>
+        <Route path="/shelters" element={<SheltersContainer/>}></Route>
         <Route path="/parents" element={<ParentsAll/>}></Route>
         <Route path="/pets" element={<PetsAll />}></Route>
         <Route path={`/${s_p}/${id}/pets`} element={<PetsContainer s_p={s_p} id={id}/>}></Route>

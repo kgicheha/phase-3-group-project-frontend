@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
 const NewParentForm = () => {
 
@@ -47,7 +47,7 @@ function handleChange(e) {
         e.target.name === "gift"
         )
         {
-            let result ;
+            let result;
             e.target.value === "false" ? result = false : result = true
             setFormData({...formData,
                 [e.target.name]: result
@@ -87,7 +87,6 @@ function handleChange(e) {
                 <input type="text" name="living_situation" value ={formData.living_situation} onChange={handleChange}/><br></br>
             <label>Which vet provider do you currently have?</label><br></br>
                 <input type="text" name="vet_provider" value ={formData.vet_provider} onChange={handleChange}/><br></br>
-
             <label>Have you had pets confiscated before?</label><br></br>
                 <select name="pet_confiscation"value={formData.pet_confiscation} onChange={handleChange}>
                     <option selected="selected" value={true}>true</option>
