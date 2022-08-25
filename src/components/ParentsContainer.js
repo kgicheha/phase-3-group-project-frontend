@@ -7,6 +7,7 @@ const ParentsContainer = ({id}) => {
 
     const [parents, setParents] = useState([])
 
+    //get parents
     useEffect(()=>{
      
         fetch(`http://localhost:9292/shelters/${id}/parents`)
@@ -17,20 +18,20 @@ const ParentsContainer = ({id}) => {
          // eslint-disable-next-line
     },[]);
 
-console.log(parents)
+const parentCardData = parents.map((parent) => (
+  <ParentsCard
+    key = {parent.id}
+    parent_id = {parent.id}
+    image ={parent.image_url}
+    name = {parent.name}
+    numOfPets = {parent.current_num_pets}
+    serviceYears = {parent.service_years}
+  />
+))
 
   return (
     <div>
-    {
-      parents.map((parent) => (
-        <ParentsCard
-          key = {parent.id}
-          image ={parent.image_url}
-          numOfPets = {parent.current_num_pets}
-          serviceYears = {parent.service_years}
-        />
-      ))
-    }
+     {parentCardData}
     </div>
   )
 }
