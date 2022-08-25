@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Button } from 'semantic-ui-react';
 
 const Pet = ({id}) => {
 
@@ -30,7 +31,8 @@ const Pet = ({id}) => {
       .then(data => {setPet(data)})
   }
 
-  const handleClick = (param) => {
+  const handleClick = (e, param) => {
+    e.preventDefault()
     let newVal = pet[param];
     
     if (newVal < 10)
@@ -50,12 +52,14 @@ const Pet = ({id}) => {
       <img src={pet.image_url} alt="Pet" width= "300" />
       <br/>
       <h4>Hunger: {pet.hunger}/10 | Thirst: {pet.thirst}/10 | Hygiene: {pet.hygiene}/10 | Fun: {pet.fun}/10 | Energy: {pet.exhaustion}/10</h4> 
-      <button onClick={()=> handleClick("hunger")}>Food $3</button> &nbsp; &nbsp;
-      <button onClick={()=> handleClick("hunger")}>Treat $0.50</button> &nbsp; &nbsp;
-      <button onClick={()=> handleClick("thirst")}>Water $1</button> &nbsp; &nbsp;
-      <button onClick={()=> handleClick("hygiene")}>Bath $5</button> &nbsp; &nbsp;
-      <button onClick={()=> handleClick("fun")}>Toy $6</button> &nbsp; &nbsp;
-      <button onClick={()=> handleClick("exhaustion")}>Walk $8</button> <br/><br/>
+      <Button.Group>
+      <Button onClick={(e)=> handleClick(e, "hunger")}>Food $3</Button>
+      <Button onClick={(e)=> handleClick(e, "hunger")}>Treat $0.50</Button>
+      <Button onClick={(e)=> handleClick(e, "thirst")}>Water $1</Button>
+      <Button onClick={(e)=> handleClick(e, "hygiene")}>Bath $5</Button>
+      <Button onClick={(e)=> handleClick(e, "fun")}>Toy $6</Button>
+      <Button onClick={(e)=> handleClick(e, "exhaustion")}>Walk $8</Button> <br/><br/>
+      </Button.Group>
       <button onClick={()=> setIsBioHidden(!isBioHidden)}>{pet.name}'s Bio</button> <br/><br/>
       <button onClick={()=> setIsFormHidden(!isFormHidden)}>Adopt {pet.name} for ${pet.price}!</button>
       <p hidden ={isBioHidden}>{pet.name} is a {pet.temperament} {pet.age} year old {pet.gender}, a {pet.breed} of the {pet.species} variety. 
