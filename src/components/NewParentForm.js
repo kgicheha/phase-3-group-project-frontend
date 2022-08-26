@@ -3,9 +3,9 @@ import React, {useState} from 'react'
 const NewParentForm = () => {
 
     const [formData, setFormData] = useState({
-        image_url: "",
-        name: "",
-        service_years: "",
+        image_url: "../Assets/default_profile_photo.jpeg",
+        name:"",
+        service_years: 0,
         preferences: "",
         budget: "",
         hours_at_home: "",
@@ -15,10 +15,10 @@ const NewParentForm = () => {
         vet_provider: "",
         willing_6m_follow_up: true,
         give_pet_back: true,
-        donated_amt: "",
-        reoccuring: "",
-        gift: true,
-        gift_in_honor_of: ""
+        donated_amt: 0,
+        reoccuring: false,
+        gift: false,
+        gift_in_honor_of: "N/A"
     })
 
 // handle Submit that will post to /parents
@@ -36,16 +36,45 @@ const handleSubmit = (e) => {
          },
          body: JSON.stringify(formData)
        })
-}
 
+    // reset form
+    setFormData({
+        image_url: "../Assets/default_profile_photo.jpeg",
+        name: "",
+        service_years: 0,
+        preferences: "",
+        budget: "",
+        hours_at_home: "",
+        living_situation: "",
+        current_num_pets: "",
+        pet_confiscation: true,
+        vet_provider: "",
+        willing_6m_follow_up: true,
+        give_pet_back: true,
+        donated_amt: 0,
+        reoccuring: false,
+        gift: false,
+        gift_in_honor_of: "N/A"
+    })
+
+}
 
 //create handleChange
 function handleChange(e) {
-    if (e.target.name === "pet_confiscation" ||
-        e.target.name === "give_pet_back" ||
-        e.target.name === "willing_6m_follow_up" ||
-        e.target.name === "gift"
-        )
+    //set image to default if there's no image
+    // if (e.target.name ==="image_url")
+    //     {
+    //         if( e.target.value === "")
+    //         {
+    //             let image ;
+    //             e.target.value === "" ? image = "../Assets/default_profile_photo.jpeg" : image = e.target.value
+    //             setFormData({...formData,
+    //                 [e.target.name]: image
+    //             })
+    //         }
+    //     }
+
+    if (e.target.name === "pet_confiscation" || e.target.name === "give_pet_back" || e.target.name === "willing_6m_follow_up")
         {
             let result;
             e.target.value === "false" ? result = false : result = true
@@ -63,26 +92,18 @@ function handleChange(e) {
 
   return (
     <div>
-        <h2>Sign Up To Become a Foster Parent Today</h2>
+        <h2>Sign Up Today To Become a Foster Parent</h2>
         <form id="form" onSubmit={handleSubmit}>
-            <label>Name:</label><br></br>
+            <label>Name</label><br></br>
                 <input type="text" name="name" value ={formData.name} onChange={handleChange}/><br></br>
-            <label>Profile Image:</label><br></br>
-                <input type="text" name="image_url" value ={formData.image_url} onChange={handleChange}/><br></br>
             <label>Current Number of Pets?</label><br></br>
-                <input type="number" name="current_num_pets" value ={formData.current_num_pets} onChange={handleChange}/><br></br>
-            <label>How long have you had pets?</label><br></br>
-                <input type="number" name="service_years" value ={formData.service_years} onChange={handleChange}/><br></br>
+                <input type="number" name="current_num_pets" min={0} value ={formData.current_num_pets} onChange={handleChange}/><br></br>
             <label>Any pet preferences?</label><br></br>
                 <input type="text" name="preferences" value ={formData.preferences} onChange={handleChange} /><br></br>
             <label>What is your budget?</label><br></br>
-                <input type="number" name="budget" value ={formData.budget} onChange={handleChange}/><br></br>
-            <label>How much would you like to donate today?</label><br></br>
-                <input type="number" name="donated_amt" value ={formData.donated_amt} onChange={handleChange}/><br></br>
-            <label>How much would be willing to spend monthly to sponsor a pet?</label><br></br>
-                <input type="number" name="reoccuring" value ={formData.reoccuring} onChange={handleChange}/><br></br>
+                <input type="number" name="budget" min={0} value ={formData.budget} onChange={handleChange}/><br></br>
             <label>How many hours will you be at home(weekly)?</label><br></br>
-                <input type="number" name="hours_at_home" value ={formData.hours_at_home} onChange={handleChange}/><br></br>
+                <input type="number" name="hours_at_home" min={0} max={168} value ={formData.hours_at_home} onChange={handleChange}/><br></br>
             <label>Current Living Situation?(eg. apartment, house)</label><br></br>
                 <input type="text" name="living_situation" value ={formData.living_situation} onChange={handleChange}/><br></br>
             <label>Which vet provider do you currently have?</label><br></br>
@@ -102,16 +123,8 @@ function handleChange(e) {
                     <option selected="selected" value={true}>true</option>
                     <option value={false}>false</option>
                 </select><br></br>
-
-            <label>Is this a gift?</label><br></br>
-                <select name="gift"value={formData.gift} onChange={handleChange}>
-                    <option selected="selected" value={true}>true</option>
-                    <option value={false}>false</option>
-                </select><br></br>
-            <label>If its a gift, who is this gift for?</label><br></br>
-                <input type="text" name="gift_in_honor_of" value ={formData.gift_in_honor_of} onChange={handleChange}/><br></br>
             <input type="submit" value="Submit" />
-            </form>
+        </form>
     </div>
   )
 }
