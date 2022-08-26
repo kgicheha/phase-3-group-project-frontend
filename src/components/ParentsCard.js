@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Image, Button } from 'semantic-ui-react'
 
 
-const ParentsCard = ({name, image, numOfPets, serviceYears, setID, id, setS_P}) => {
+const ParentsCard = ({name, image, serviceYears, setID, id, setS_P}) => {
   
   function handleClick()
   {
@@ -15,9 +15,8 @@ const ParentsCard = ({name, image, numOfPets, serviceYears, setID, id, setS_P}) 
     <div className ="card" align ="center">
         <Image className='cardImage' src={image} alt={name} />
         <h3>{name}</h3>
-        <h3>Companions At Home: {numOfPets}</h3>
         <h3>Years Working With Us: {serviceYears}</h3>
-        <h3>Pets Fostering: {}</h3>
+        <br></br>
         <Link to={`/parents/${id}/pets`}><Button onClick ={handleClick}>Foster Pets</Button></Link>
 
     </div>

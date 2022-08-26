@@ -22,11 +22,9 @@ const ParentsContainer = ({setID, setS_P, iD}) => {
           id = {parent.id}
           image ={parent.image_url}
           name = {parent.name}
-          numOfPets = {parent.current_num_pets}
           serviceYears = {parent.service_years}
           setID={setID}
           setS_P={setS_P}
-          iD = {iD}
         />
       ))}
     </div>
