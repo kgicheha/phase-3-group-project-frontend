@@ -19,6 +19,7 @@ const ParentsCard = ({name, image, numOfPets, serviceYears, setID, id, setS_P}) 
         <h3>Years Working With Us: {serviceYears}</h3>
         <h3>Pets Fostering: {}</h3>
         <Link to={`/parents/${id}/pets`}><Button onClick ={handleClick}>Foster Pets</Button></Link>
+
     </div>
   )
 }
