@@ -7,13 +7,13 @@ const Sponsor = () => {
         image_url: "../Assets/default_profile_photo.jpeg",
         name: "",
         service_years: 0,
-        preferences: "N/A",
+        preferences: "",
         budget: 0,
         hours_at_home: 0,
-        living_situation: "N/A",
+        living_situation: "",
         current_num_pets: 0,
         pet_confiscation: false,
-        vet_provider: "N/A",
+        vet_provider: "",
         willing_6m_follow_up: true,
         give_pet_back: true,
         donated_amt: "",
@@ -43,13 +43,13 @@ const handleSubmit = (e) => {
         image_url: "../Assets/default_profile_photo.jpeg",
         name: "",
         service_years: 0,
-        preferences: "N/A",
+        preferences: "",
         budget: 0,
         hours_at_home: 0,
-        living_situation: "N/A",
+        living_situation: "",
         current_num_pets: 0,
         pet_confiscation: false,
-        vet_provider: "N/A",
+        vet_provider: "",
         willing_6m_follow_up: true,
         give_pet_back: true,
         donated_amt: "",
@@ -81,24 +81,27 @@ function handleChange(e) {
     <div className='FormContainer'>
         <h2>Donate Today</h2>
         <Form className="form" onSubmit={handleSubmit}>
-            <label>Name:</label><br></br>
-                <input type="text" name="name" value ={formData.name} onChange={handleChange}/><br></br>
-            <label>How much would you like to donate today?</label><br></br>
-                <input type="number" name="donated_amt" min={0} value ={formData.donated_amt} onChange={handleChange}/><br></br>
-            <label>How long been part a member?(years)</label><br></br>
-                <input type="number" name="service_years" min={0} value ={formData.service_years} onChange={handleChange}/><br></br>
-            <label>Will this be a reoccurring donation?</label><br></br>
+            <label>Full Name:</label>
+                <input type="text" name="name" value ={formData.name} onChange={handleChange}/>
+            <br></br> <br></br>
+            <label>How much would you like to donate today?</label>
+                <input type="number" name="donated_amt" min={0} value ={formData.donated_amt} onChange={handleChange}/>
+            <br></br><br></br>
+            <label>Will this be a reoccurring donation?</label>
+            <br></br>
                 <select name="reoccuring"value={formData.reoccuring} onChange={handleChange}>
-                    <option selected="selected" value={true}>true</option>
-                    <option value={false}>false</option>
-                </select><br></br>
+                    <option selected="selected" value={true}>True</option>
+                    <option value={false}>False</option>
+                </select>
+                <br></br>
             <label>Is this a gift?</label><br></br>
                 <select name="gift"value={formData.gift} onChange={handleChange}>
-                    <option selected="selected" value={true}>true</option>
-                    <option value={false}>false</option>
+                    <option selected="selected" value={true}>True</option>
+                    <option value={false}>False</option>
                 </select><br></br>
             <label>If its a gift, who is this gift for?</label><br></br>
                 <input type="text" name="gift_in_honor_of" value ={formData.gift_in_honor_of} onChange={handleChange}/><br></br>
+            <br></br>
             <Button type='submit'>Submit</Button>
             </Form>
     </div>

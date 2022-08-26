@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/light-grey-terrazzo.png");
 }
 
 code {
@@ -35,13 +36,16 @@ code {
 .FormContainer
 {
   margin: auto;
+  margin-top: 10px;
   padding: 30px;
+  background-color: rgba(67, 179, 72, 0.4);
 }
 
 /* contains all of the about page */
 .aboutContainer{
   margin: auto;
   padding: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .PetIbuttons{
@@ -57,17 +61,23 @@ code {
   -webkit-flex-direction: row;
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
+  
 }
 
 .PetInstance{
-  padding: 10px;
+  padding-top: 30px;
+  width: fit-content;
   margin: auto;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* actual form visuals*/
 .form{
   width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* all */
@@ -83,6 +93,12 @@ code {
   background-color: #fff;
 }
 
+#logo{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 .Petimage{
   display: block;
   margin-left: auto;
@@ -94,6 +110,9 @@ code {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 300px; /* width of container */
+  height: 300px; /* height of container */
+  object-fit: cover;
 }
 
 /* Pictures in About Collaborators */
@@ -108,9 +127,18 @@ code {
   margin: auto;
 }
 
+#navBar{
+  background-color: rgb(226, 226, 226);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Lettering */
 
-
+h2, h3{
+  text-align: center;
+}
 
 
 
