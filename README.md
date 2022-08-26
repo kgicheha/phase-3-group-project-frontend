@@ -10,10 +10,10 @@ Visuals:
   [Semantic](https://react.semantic-ui.com/)
 
 Background: 
-  https://www.toptal.com/designers/subtlepatterns/
+  [Toptal](https://www.toptal.com/designers/subtlepatterns/)
 
 Seed Data:
-  https://dog.ceo/dog-api/
-  https://www.dreamstime.com/
-  https://unsplash.com/
+  - [Dog API](https://dog.ceo/dog-api/)
+  - [Dreamstime](https://www.dreamstime.com/)
+  - [Unsplash](https://unsplash.com/)
   
