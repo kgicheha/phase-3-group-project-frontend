@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Shelters from './Shelters';
 
-const SheltersContainer = () => {
+const SheltersContainer = ({setS_P, setID}) => {
 
   const [shelters, setShelters] = useState([])
 
@@ -13,7 +13,7 @@ const SheltersContainer = () => {
 }, []);
 
   return (
-    <div>
+    <div className='ShelterContainer'>
     {
       shelters.map((shelter) => (
         <Shelters
@@ -24,6 +24,8 @@ const SheltersContainer = () => {
           hours = {shelter.hours}
           no_kill = {shelter.no_kill}
           id = {shelter.id}
+          setID ={setID}
+          setS_P ={setS_P}
            /> 
       ))
     }
