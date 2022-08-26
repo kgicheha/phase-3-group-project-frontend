@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Form } from 'semantic-ui-react'
 
-const NewParentForm = () => {
+const NewParentForm = ({afterFormSubmit}) => {
 
     const [formData, setFormData] = useState({
         image_url: "../Assets/default_profile_photo.jpeg",
@@ -58,6 +58,7 @@ const handleSubmit = (e) => {
         gift_in_honor_of: "N/A"
     })
 
+    afterFormSubmit();
 }
 
 //create handleChange
