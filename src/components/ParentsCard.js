@@ -15,8 +15,9 @@ const ParentsCard = ({name, image, numOfPets, serviceYears, setID, id, setS_P}) 
     <div className ="card" align ="center">
         <Image className='cardImage' src={image} alt={name} />
         <h3>{name}</h3>
-        <h3>Number of Pets: {numOfPets}</h3>
-        <h3>Years working with us: {serviceYears}</h3>
+        <h3>Companions At Home: {numOfPets}</h3>
+        <h3>Years Working With Us: {serviceYears}</h3>
+        <h3>Pets Sponsoring: </h3>
         <Link to={`/parents/${id}/pets`}><Button onClick ={handleClick}>Pets</Button></Link>
     </div>
   )
