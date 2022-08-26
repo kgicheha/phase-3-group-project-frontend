@@ -87,13 +87,13 @@ function handleChange(e) {
                 <input type="number" name="donated_amt" min={0} value ={formData.donated_amt} onChange={handleChange}/><br></br>
             <label>Will this be a reoccurring donation?</label><br></br>
                 <select name="reoccuring"value={formData.reoccuring} onChange={handleChange}>
-                    <option selected="selected" value={true}>true</option>
-                    <option value={false}>false</option>
+                    <option selected="selected" value={true}>True</option>
+                    <option value={false}>False</option>
                 </select><br></br>
             <label>Is this a gift?</label><br></br>
                 <select name="gift"value={formData.gift} onChange={handleChange}>
-                    <option selected="selected" value={true}>true</option>
-                    <option value={false}>false</option>
+                    <option selected="selected" value={true}>True</option>
+                    <option value={false}>False</option>
                 </select><br></br>
             <label>If its a gift, who is this gift for?</label><br></br>
                 <input type="text" name="gift_in_honor_of" value ={formData.gift_in_honor_of} onChange={handleChange}/><br></br>
