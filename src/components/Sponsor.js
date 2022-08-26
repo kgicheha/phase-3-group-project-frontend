@@ -85,8 +85,6 @@ function handleChange(e) {
                 <input type="text" name="name" value ={formData.name} onChange={handleChange}/><br></br>
             <label>How much would you like to donate today?</label><br></br>
                 <input type="number" name="donated_amt" min={0} value ={formData.donated_amt} onChange={handleChange}/><br></br>
-            <label>How long have you been part a member?(years)</label><br></br>
-                <input type="number" name="service_years" min={0} value ={formData.service_years} onChange={handleChange}/><br></br>
             <label>Will this be a reoccurring donation?</label><br></br>
                 <select name="reoccuring"value={formData.reoccuring} onChange={handleChange}>
                     <option selected="selected" value={true}>true</option>
