@@ -1,19 +1,20 @@
-import {React, useState} from 'react';
+import {React, useState} from 'react'
 import {Route, Routes} from "react-router-dom";
 
-import NavBar from './NavBar';
-import About from './About';
-import ParentsAll from './ParentsAll';
-import SheltersContainer from './SheltersContainer';
-import PetsAll from './PetsAll';
+import NavBar from './NavBar'
+import About from './About'
+import ParentsAll from './ParentsAll'
+import SheltersContainer from './SheltersContainer'
+import PetsAll from './PetsAll'
 import PetsContainer from './PetsContainer';
 import ParentsContainer from './ParentsContainer';
 import PetInstance from './PetInstance';
 
 const App = () => {
 
-  const [s_p, setS_P] = useState("");
-  const [iD, setID] = useState(1);
+  // eslint-disable-next-line
+  const [s_p, setS_P] = useState("")
+  const [iD, setID] = useState(1)
 
   return (
     <div>
@@ -47,3 +48,4 @@ const App = () => {
 }
 
 export default App
+
