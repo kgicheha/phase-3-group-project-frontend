@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Button } from 'semantic-ui-react';
 
-const Pet = ({id}) => {
+const PetInstance = ({id}) => {
 
   const [pet, setPet] = useState({})
   const [isBioHidden, setIsBioHidden] = useState(true);
@@ -73,4 +73,4 @@ const Pet = ({id}) => {
   )
 }
 
-export default Pet
+export default PetInstance
