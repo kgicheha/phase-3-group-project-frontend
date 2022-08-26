@@ -7,7 +7,7 @@ function NavBar () {
   return (
    <>
     <img id="logo" src={require("../Assets/logo.png")} alt="Logo" height="125"/>
-    <div className='navBar'>
+    <div id='navBar'>
     <Button.Group attached={true}>
     <Link to="/"><Button>Home</Button></Link>
     <Link to="/shelters"><Button>Shelters</Button></Link>

@@ -12,7 +12,9 @@ code {
     monospace;
 }
 
-.AboutContainer {
+/* All things that contain stuff will be named this */
+/* EXCEPT forms, About page, & Pet Instance*/
+.Container {
   text-align: center;
   font-weight: bold;
   padding: 10px;
@@ -29,13 +31,86 @@ code {
   -webkit-flex-wrap: wrap;
 }
 
+/* container for forms */
+.FormContainer
+{
+  margin: auto;
+  padding: 30px;
+}
+
+/* contains all of the about page */
+.aboutContainer{
+  margin: auto;
+  padding: 30px;
+}
+
+.PetIbuttons{
+  padding: 10px;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: space-around;
+  -webkit-jusitfy-content: space-around;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.PetInstance{
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+
+/* actual form visuals*/
+.form{
+  width: 75%;
+}
+
+/* all */
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  width:360px;
+  height: auto;
+  text-align: center;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #fff;
+}
+
+.Petimage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pictures in About Collaborators */
 .AboutPicture {
   width: 275px;
   height: 275px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.ShelterContainer {
-  padding: 10px;
-  text-align: center;
+/* about project */
+.aboutProject{
+  margin: auto;
 }
+
+/* Lettering */
+
+
+
+
+

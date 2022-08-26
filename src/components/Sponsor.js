@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Form, Button } from 'semantic-ui-react'
 
 const Sponsor = () => {
 
@@ -77,9 +78,9 @@ function handleChange(e) {
     )
   }
   return (
-    <div>
+    <div className='FormContainer'>
         <h2>Donate Today</h2>
-        <form id="form" onSubmit={handleSubmit}>
+        <Form className="form" onSubmit={handleSubmit}>
             <label>Name:</label><br></br>
                 <input type="text" name="name" value ={formData.name} onChange={handleChange}/><br></br>
             <label>How much would you like to donate today?</label><br></br>
@@ -98,8 +99,8 @@ function handleChange(e) {
                 </select><br></br>
             <label>If its a gift, who is this gift for?</label><br></br>
                 <input type="text" name="gift_in_honor_of" value ={formData.gift_in_honor_of} onChange={handleChange}/><br></br>
-            <input type="submit" value="Submit" />
-            </form>
+            <Button type='submit'>Submit</Button>
+            </Form>
     </div>
   )
 }

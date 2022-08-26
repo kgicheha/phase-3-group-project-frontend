@@ -13,7 +13,7 @@ const SheltersContainer = ({setS_P, setID}) => {
 }, []);
 
   return (
-    <div className='ShelterContainer'>
+    <div className='Container'>
     {
       shelters.map((shelter) => (
         <Shelters

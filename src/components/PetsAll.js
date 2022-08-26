@@ -13,7 +13,7 @@ const PetsAll = ({setID}) => {
     }, []);
 
   return (
-    <div>
+    <div className='Container'>
     {
       pets.map((pet) => (
         <PetsCard

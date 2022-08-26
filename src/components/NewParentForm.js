@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Form } from 'semantic-ui-react'
 
 const NewParentForm = () => {
 
@@ -61,19 +62,6 @@ const handleSubmit = (e) => {
 
 //create handleChange
 function handleChange(e) {
-    //set image to default if there's no image
-    // if (e.target.name ==="image_url")
-    //     {
-    //         if( e.target.value === "")
-    //         {
-    //             let image ;
-    //             e.target.value === "" ? image = "../Assets/default_profile_photo.jpeg" : image = e.target.value
-    //             setFormData({...formData,
-    //                 [e.target.name]: image
-    //             })
-    //         }
-    //     }
-
     if (e.target.name === "pet_confiscation" || e.target.name === "give_pet_back" || e.target.name === "willing_6m_follow_up")
         {
             let result;
@@ -91,9 +79,9 @@ function handleChange(e) {
   }
 
   return (
-    <div>
+    <div className='FormContainer'>
         <h2>Sign Up Today To Become a Foster Parent</h2>
-        <form id="form" onSubmit={handleSubmit}>
+        <Form className="form" onSubmit={handleSubmit}>
             <label>Name</label><br></br>
                 <input type="text" name="name" value ={formData.name} onChange={handleChange}/><br></br>
             <label>Current Number of Pets?</label><br></br>
@@ -124,7 +112,7 @@ function handleChange(e) {
                     <option value={false}>false</option>
                 </select><br></br>
             <input type="submit" value="Submit" />
-        </form>
+        </Form>
     </div>
   )
 }

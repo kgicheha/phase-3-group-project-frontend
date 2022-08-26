@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Button } from 'semantic-ui-react';
 
 const PetsCard = ({image, name, setID, id}) => {
   
   const handleClick=()=>setID(id);
  
   return (
-    <div>
-        <img src={image} width={200} alt={name}/>
+    <div className='card'>
+        <img src={image} className="image" width={200} alt={name}/>
         <h3>{name}</h3>
-        <button onClick={handleClick}><Link to={`/pet/${id}`}>Sponsor me!</Link></button>
+        <Link to={`/pet/${id}`}><Button onClick={handleClick}>Sponsor me!</Button></Link>
     </div>
   )
 }

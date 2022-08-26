@@ -15,7 +15,7 @@ const ParentsAll = ({setID, setS_P, iD}) => {
 
 
   return (
-    <div>
+    <div className='Container'>
       {parents.map((parent) => (
         <ParentsCard
           key = {parent.id}

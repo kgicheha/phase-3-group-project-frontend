@@ -13,7 +13,7 @@ const PetsContainer = ({iD, s_p, setID}) => {
     },[]);
 
   return (
-      <div>{
+      <div className='Container'>{
       pets.map((pet) => (
         <PetsCard
           key = {pet.id}
