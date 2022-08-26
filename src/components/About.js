@@ -1,5 +1,5 @@
 import React from 'react'
-import NewParentForm from './NewParentForm'
+import Sponsor from './Sponsor'
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
         </p>
     </div>
     <br/>
-    <NewParentForm />
+    <Sponsor />
     <br/>
     <h3>About Collaborators</h3>
     <div className="AboutContainer">
