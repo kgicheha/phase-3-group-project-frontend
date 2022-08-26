@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.AboutContainer {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: space-around;
+  -webkit-jusitfy-content: space-around;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.AboutPicture {
+  width: 275px;
+  height: 275px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}

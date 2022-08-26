@@ -7,26 +7,44 @@ const About = () => {
 
     <div>
         <h2>About This Project</h2>
-        <p>This app is used to raise funds for animal shelters.
-            It allows users to foster a pet or underwrite a pet.
+        <p>This application is used to find loving forever houses for pets and to raise funds for animal shelters.
+            It allows users to foster a pet, sponsor a pet or to make donations to the shelters.
             It offers a user the opportunity to digitally maintain their fostered/sponsored pet via life stats, such as hunger/thirst/fun/hygiene/etc.
         </p>
     </div>
+    <br/>
     <NewParentForm />
-    <div>
-        <h3>About collaborators</h3>
+    <br/>
+    <h3>About Collaborators</h3>
+    <div className="AboutContainer">
+        <div className="About">
         <p>
-            Karter Livingston: <a href="https://github.com/kdliving14">github</a>
+            <img className="AboutPicture" id="Karter" src={require("../Assets/Karter.jpg")} alt="Karter"/> <br/>
+            Karter Livingston: <a href="https://github.com/kdliving14">GitHub</a> - {''}
+                            <a href="https://www.linkedin.com/in/karter-livingston">LinkedIn</a>
         </p>
+        </div>
+        <div className="About">
         <p>
-            Danna Waltz: <a href="https://github.com/DannaEWaltz">github</a>
+            <img className="AboutPicture" id="Danna" src={require("../Assets/Danna.jpg")} alt="Danna"/> <br/>
+            Danna Waltz: <a href="https://github.com/DannaEWaltz">GitHub</a> - {''}
+                        <a href="https://www.linkedin.com/in/danna-waltz-2607b222b">LinkedIn</a>
         </p>
+        </div>
+        <div className="About">
         <p>
-            Justin Myers: <a href="https://github.com/jlmyers14">github</a>
+            <img className="AboutPicture" id="Justin" src={require("../Assets/Justin.jpg")} alt="Justin"/> <br/>
+            Justin Myers: <a href="https://github.com/jlmyers14">GitHub</a> - {''}
+                        <a href="https://www.linkedin.com/in/justin-leroux-myers">LinkedIn</a>
        </p>
+       </div>
+       <div className="About">
         <p>
-            Kevin Gicheha: <a href="https://github.com/kgicheha">github</a>
+            <img className="AboutPicture" id="Kevin" src={require("../Assets/Kevin.jpg")} alt="Kevin"/> <br/>
+            Kevin Gicheha: <a href="https://github.com/kgicheha">GitHub</a> - {''}
+                        <a href="https://www.linkedin.com/in/kevin-gicheha/">LinkedIn</a>          
         </p>
+        </div>
 
     </div>
     </>
