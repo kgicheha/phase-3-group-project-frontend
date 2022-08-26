@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import { Button} from 'semantic-ui-react';
+import { Button, Image } from 'semantic-ui-react';
+
 import NewParentForm from './NewParentForm'
 
 const PetInstance = ({id}) => {
@@ -69,18 +70,16 @@ const PetInstance = ({id}) => {
     setisInstanceHidden(!isInstanceHidden)
   }
 
-
   return (
     <div className='Container'>
       <h3 hidden = {isMessage}>Congratulations!! You have successfully adopted the pet!</h3>
-
-      <div hidden ={isInstanceHidden}className='PetInstance'>
-        <h1>{pet.name}</h1>
-        <br/>
-        <img className="Petimage" src={pet.image_url} alt="Pet" width= "300" />
-        <br/>
-        <h4>Hunger: {pet.hunger}/10 | Thirst: {pet.thirst}/10 | Hygiene: {pet.hygiene}/10 | Fun: {pet.fun}/10 | Energy: {pet.exhaustion}/10</h4>
-        <div className='PetIbuttons'>
+    <div hidden ={isInstanceHidden} className='PetInstance'>
+      <h1>{pet.name}</h1>
+      <br/>
+      <Image className="Petimage" src={pet.image_url} alt="Pet" width= "300" />
+      <br/>
+      <h4>Hunger: {pet.hunger}/10 | Thirst: {pet.thirst}/10 | Hygiene: {pet.hygiene}/10 | Fun: {pet.fun}/10 | Energy: {pet.exhaustion}/10</h4> 
+      <div className='PetIbuttons'>
         <Button.Group>
         <Button onClick={(e)=> handleClick(e, "hunger")}>Food $3</Button>
         <Button onClick={(e)=> handleClick(e, "hunger")}>Treat $0.50</Button>
@@ -89,19 +88,18 @@ const PetInstance = ({id}) => {
         <Button onClick={(e)=> handleClick(e, "fun")}>Toy $6</Button>
         <Button onClick={(e)=> handleClick(e, "exhaustion")}>Walk $8</Button> <br/><br/>
         </Button.Group>
-        </div>
-        <div className='PetIbuttons'>
+      </div>
+      <div className='PetIbuttons'>
         <Button onClick={()=> setIsBioHidden(!isBioHidden)}>{pet.name}'s Bio</Button> <br/><br/>
         <Button onClick={()=> setIsFormHidden(!isFormHidden)}>Adopt {pet.name} for ${pet.price}!</Button>
-        </div>
-        <p hidden ={isBioHidden}>{pet.name} is a {pet.temperament} {pet.age} year old {pet.gender}, a {pet.breed} of the {pet.species} variety.
+      </div>
+        <p hidden ={isBioHidden}>{pet.name} is a {pet.temperament} {pet.age} year old {pet.gender}, a {pet.breed} of the {pet.species} variety. 
         The best home for {pet.name} should have {pet.recommendations}.
-        {pet.medical === "n/a" ? ` ${pet.name} has no medical issues`: ` ${pet.name} unfortunately suffers from ${pet.medical}`}.
+        {pet.medical === "n/a" ? ` ${pet.name} has no medical issues`: ` ${pet.name} unfortunately suffers from ${pet.medical}`}. 
         {pet.adopt_status==="not started" ? ` ${pet.name} is still waiting for someone to apply to be their forever home`: ` Someone has applied to adopt ${pet.name} and we are currently vetting their paperwork`}.
         </p>
-        <p hidden = {isFormHidden}><NewParentForm afterFormSubmit={afterFormSubmit}/></p>
-
       </div>
+      <div hidden = {isFormHidden}><NewParentForm afterFormSubmit={afterFormSubmit}/></div>
     </div>
   )
 }

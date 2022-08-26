@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Form } from 'semantic-ui-react'
+import { Form, Button } from 'semantic-ui-react'
 
 const NewParentForm = ({afterFormSubmit}) => {
 
@@ -57,7 +57,6 @@ const handleSubmit = (e) => {
         gift: false,
         gift_in_honor_of: "N/A"
     })
-
     afterFormSubmit();
 }
 
@@ -83,26 +82,33 @@ function handleChange(e) {
     <div className='FormContainer'>
         <h2>Sign Up Today To Become a Foster Parent</h2>
         <Form className="form" onSubmit={handleSubmit}>
-            <label>Name</label><br></br>
-                <input type="text" name="name" value ={formData.name} onChange={handleChange}/><br></br>
-            <label>Current Number of Pets?</label><br></br>
-                <input type="number" name="current_num_pets" min={0} value ={formData.current_num_pets} onChange={handleChange}/><br></br>
-            <label>Any pet preferences?</label><br></br>
-                <input type="text" name="preferences" value ={formData.preferences} onChange={handleChange} /><br></br>
-            <label>What is your budget?</label><br></br>
-                <input type="number" name="budget" min={0} value ={formData.budget} onChange={handleChange}/><br></br>
-            <label>How many hours will you be at home(weekly)?</label><br></br>
-                <input type="number" name="hours_at_home" min={0} max={168} value ={formData.hours_at_home} onChange={handleChange}/><br></br>
-            <label>Current Living Situation?(eg. apartment, house)</label><br></br>
-                <input type="text" name="living_situation" value ={formData.living_situation} onChange={handleChange}/><br></br>
-            <label>Which vet provider do you currently have?</label><br></br>
-                <input type="text" name="vet_provider" value ={formData.vet_provider} onChange={handleChange}/><br></br>
+            <label>Full Name:</label>
+                <input type="text" name="name" value ={formData.name} onChange={handleChange}/>
+                <br></br><br></br>
+            <label>Current Number of Pets?</label>
+                <input type="number" name="current_num_pets" min={0} value ={formData.current_num_pets} onChange={handleChange}/>
+                <br></br><br></br>
+            <label>Any pet preferences?</label>
+                <input type="text" name="preferences" value ={formData.preferences} onChange={handleChange} />
+                <br></br><br></br>
+            <label>What is your budget?</label>
+                <input type="number" name="budget" min={0} value ={formData.budget} onChange={handleChange}/>
+                <br></br><br></br>
+            <label>How many hours will you be at home (weekly)?</label>
+                <input type="number" name="hours_at_home" min={0} max={168} value ={formData.hours_at_home} onChange={handleChange}/>
+                <br></br><br></br>
+            <label>Current Living Situation? (eg. apartment, house)</label>
+                <input type="text" name="living_situation" value ={formData.living_situation} onChange={handleChange}/>
+                <br></br><br></br>
+            <label>Which vet provider do you currently have?</label>
+                <input type="text" name="vet_provider" value ={formData.vet_provider} onChange={handleChange}/>
+                <br></br><br></br>
             <label>Have you had pets confiscated before?</label><br></br>
                 <select name="pet_confiscation"value={formData.pet_confiscation} onChange={handleChange}>
                     <option selected="selected" value={true}>True</option>
                     <option value={false}>False</option>
                 </select><br></br>
-            <label>Are you open to a 6 month follow up from shelter?</label><br></br>
+            <label>Are you open to a 6 month follow up from the shelter?</label><br></br>
                 <select name="willing_6m_follow_up"value={formData.willing_6m_follow_up} onChange={handleChange}>
                     <option selected="selected" value={true}>True</option>
                     <option value={false}>False</option>
@@ -112,7 +118,7 @@ function handleChange(e) {
                     <option selected="selected" value={true}>True</option>
                     <option value={false}>False</option>
                 </select><br></br>
-            <input type="submit" value="Submit" />
+            <Button type='submit'>Submit</Button>
         </Form>
     </div>
   )
