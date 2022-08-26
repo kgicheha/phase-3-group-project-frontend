@@ -4,7 +4,7 @@ import { Form, Button } from 'semantic-ui-react'
 const NewParentForm = ({afterFormSubmit}) => {
 
     const [formData, setFormData] = useState({
-        image_url: "../Assets/default_profile_photo.jpeg",
+        image_url: "https://i.stack.imgur.com/l60Hf.png",
         name:"",
         service_years: 0,
         preferences: "",
@@ -40,7 +40,7 @@ const handleSubmit = (e) => {
 
     // reset form
     setFormData({
-        image_url: "../Assets/default_profile_photo.jpeg",
+        image_url: "https://i.stack.imgur.com/l60Hf.png",
         name: "",
         service_years: 0,
         preferences: "",
