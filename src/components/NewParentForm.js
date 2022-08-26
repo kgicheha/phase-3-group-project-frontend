@@ -99,18 +99,18 @@ function handleChange(e) {
                 <input type="text" name="vet_provider" value ={formData.vet_provider} onChange={handleChange}/><br></br>
             <label>Have you had pets confiscated before?</label><br></br>
                 <select name="pet_confiscation"value={formData.pet_confiscation} onChange={handleChange}>
-                    <option selected="selected" value={true}>true</option>
-                    <option value={false}>false</option>
+                    <option selected="selected" value={true}>True</option>
+                    <option value={false}>False</option>
                 </select><br></br>
             <label>Are you open to a 6 month follow up from shelter?</label><br></br>
                 <select name="willing_6m_follow_up"value={formData.willing_6m_follow_up} onChange={handleChange}>
-                    <option selected="selected" value={true}>true</option>
-                    <option value={false}>false</option>
+                    <option selected="selected" value={true}>True</option>
+                    <option value={false}>False</option>
                 </select><br></br>
             <label>Are you willing to give the pet back if the living condition is found to be unsuitable?</label><br></br>
                 <select name="give_pet_back"value={formData.give_pet_back} onChange={handleChange}>
-                    <option selected="selected" value={true}>true</option>
-                    <option value={false}>false</option>
+                    <option selected="selected" value={true}>True</option>
+                    <option value={false}>False</option>
                 </select><br></br>
             <input type="submit" value="Submit" />
         </Form>
